@@ -1,5 +1,6 @@
 import fs from 'fs';
-import { TableData, example, Delimiter } from './inputs/example.js';
+import { example } from './inputs/example.js';//Import your data here.
+import { TableData, Delimiter } from './inputs/example.js';
 
 
 function arrayToCSV(data: TableData, delimiter: Delimiter = ','): string {
@@ -22,6 +23,6 @@ function writeCSVToFile(fileName: string, data: TableData, delimiter: Delimiter 
     });
 }
 
-//change data source to w/e you want.
+//change data source to w/e you want changing the data and name to match your preferences.
 const useData = { name: 'example', data: example }
 writeCSVToFile(`./outputs/output${useData.name}.csv`, useData.data)
